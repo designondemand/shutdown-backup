@@ -25,7 +25,7 @@ $ systemctl enable shutdown-backup-enable@profile-name.timer
 $ systemctl start shutdown-backup-enable@profile-name.timer
 ```
 
-to manually enable the backup to be run at the next backup just enable the `shutdown-backup@.service` service with the profile name as the instance variable
+to manually enable the backup to be run at the next shutdown just enable the `shutdown-backup@.service` service with the profile name as the instance variable
 ```
 $ systemctl enable shutdown-backup@profile-name
 ```
