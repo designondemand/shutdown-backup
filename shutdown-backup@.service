@@ -5,8 +5,8 @@ Before=shutdown.target reboot.target halt.target
 
 [Service]
 Type=oneshot
-ExecStart=/usr/bin/sleep 10
-ExecStart=/usr/bin/systemctl disable shutdown-backup
+ExecStart=/usr/bin/unison -batch %i
+ExecStart=/usr/bin/systemctl disable %n
 StandardOutput=console
 
 [Install]
