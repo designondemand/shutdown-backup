@@ -34,3 +34,15 @@ to run the backup straight away just start the service instead of enabling it
 ```
 $ systemctl start shutdown-backup@profile-name
 ```
+
+## set when the backup is run
+by default the backup is set to be run on a weekly basis. The easiest way to do this is to add a [drop-in snippet](https://wiki.archlinux.org/index.php/systemd#Drop-in_snippets) for the `shutdown-backup-enable@.timer` unit and set the OnCalendar parameter to the desired value
+```
+$ systemctl edit shutdown-backup-enable@profile-name.timer
+```
+
+to set the backup to run on Wednesdays and Fridays add the following to the drop-in snippet
+```
+[Timer]
+OnCalendar=Wed,Fri
+```
