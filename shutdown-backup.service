@@ -5,7 +5,8 @@ Before=shutdown.target reboot.target halt.target
 
 [Service]
 Type=oneshot
-ExecStart=/home/martin/Projects/backup-on-shutdown/testscript.sh
+ExecStart=/usr/bin/sleep 10
+ExecStart=/usr/bin/systemctl disable shutdown-backup
 
 [Install]
 WantedBy=shutdown.target
