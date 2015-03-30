@@ -1,0 +1,11 @@
+[Unit]
+Description=Run backup task
+DefaultDependencies=no
+Before=shutdown.target reboot.target halt.target
+
+[Service]
+Type=oneshot
+ExecStart=/home/martin/Projects/backup-on-shutdown/testscript.sh
+
+[Install]
+WantedBy=shutdown.target
