@@ -1,5 +1,5 @@
 [Unit]
-Description=Run backup task
+Description=Run unison backup on shutdown
 DefaultDependencies=no
 Before=shutdown.target reboot.target halt.target
 
@@ -7,6 +7,7 @@ Before=shutdown.target reboot.target halt.target
 Type=oneshot
 ExecStart=/usr/bin/sleep 10
 ExecStart=/usr/bin/systemctl disable shutdown-backup
+StandardOutput=console
 
 [Install]
 WantedBy=shutdown.target
