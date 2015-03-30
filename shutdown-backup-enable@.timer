@@ -2,7 +2,7 @@
 Description=Enable Shutdown Backup eveny Wednesday and Friday
 
 [Timer]
-OnCalendar=Wed,Fri
+OnCalendar=weekly
 Persistent=true     
  
 [Install]

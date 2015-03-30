@@ -1,6 +1,7 @@
 # shutdown-backup
 Systemd services to run a unison profile on shutdown.
-When correctly setup will run the selected unison profile when the computer is shutdown or restarted every Wednesday and Friday
+
+When correctly setup will run the selected unison profile whenever the computer is shutdown or restarted but only once a week.
 
 ## requirements
 - [systemd](http://www.freedesktop.org/wiki/Software/systemd/)
@@ -18,7 +19,7 @@ $ ./install.sh
 ```
 
 ## usage
-to enable automatic backups on shutdowns on Wednesdays and Fridays enanble and start the `shutdown-backup-enable@.timer` unit with the profile name as the instance variable
+to enable automatic weekly backups on shutdowns enanble and start the `shutdown-backup-enable@.timer` unit with the profile name as the instance variable
 ```
 $ systemctl enable shutdown-backup-enable@profile-name.timer
 $ systemctl start shutdown-backup-enable@profile-name.timer
