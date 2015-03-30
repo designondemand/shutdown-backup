@@ -7,7 +7,7 @@ Before=shutdown.target reboot.target halt.target
 Type=oneshot
 Environment="HOME=/root"
 StandardOutput=journal+console
-ExecStart=/usr/bin/unison -batch %i
+ExecStart=-/usr/bin/unison -batch %i
 ExecStart=/usr/bin/systemctl disable %n
 
 [Install]
