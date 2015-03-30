@@ -3,6 +3,8 @@ Systemd services to run a unison profile on shutdown.
 
 When correctly setup will run the selected unison profile whenever the computer is shutdown or restarted but only once a week.
 
+This is very useful for doing regular weekly backups at work because they would run automatically at the end of the day when the computer is shutdown instead of during work hours when the computers resources might be needed for other things. And since it runs at shutdown, the user does not have to wait for it to finish before they can head home.
+
 ## requirements
 - [systemd](http://www.freedesktop.org/wiki/Software/systemd/)
 - [unison](http://www.cis.upenn.edu/~bcpierce/unison/)
