@@ -1,0 +1,6 @@
+[Unit]
+Description=Enable shutdown backup
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/systemctl enable shutdown-backup

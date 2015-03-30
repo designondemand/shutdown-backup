@@ -1,0 +1,9 @@
+[Unit]
+Description=Enable Shutdown Backup eveny Wednesday and Friday
+
+[Timer]
+OnCalendar=Wed,Fri
+Persistent=true     
+ 
+[Install]
+WantedBy=timers.target
