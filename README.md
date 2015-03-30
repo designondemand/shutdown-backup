@@ -35,6 +35,11 @@ to run the backup straight away just start the service instead of enabling it
 $ systemctl start shutdown-backup@profile-name
 ```
 
+## unison setup
+the above examples assume you have a unison profile called profile-name at /root/.unison/profile-name.prf
+
+the easiest way to set this up is to create and test the profile in your home directory using something like unison-gtk and then copy it (and it's corresponding archive file) it to the /root/.unison/ directory.
+
 ## set when the backup is run
 by default the backup is set to be run on a weekly basis. The easiest way to do this is to add a [drop-in snippet](https://wiki.archlinux.org/index.php/systemd#Drop-in_snippets) for the `shutdown-backup-enable@.timer` unit and set the OnCalendar parameter to the desired value
 ```
