@@ -1,14 +1,14 @@
 [Unit]
 Description=Run unison backup on shutdown
-DefaultDependencies=no
-Before=shutdown.target reboot.target halt.target
 
 [Service]
 Type=oneshot
 Environment="HOME=/root"
 StandardOutput=journal+console
-ExecStart=-/usr/bin/unison -batch %i
-ExecStart=/usr/bin/systemctl disable %n
+RemainAfterExit=yes
+ExecStart=/bin/true
+ExecStop=-/usr/bin/unison -batch %i
+ExecStop=/usr/bin/systemctl disable %n
 
 [Install]
-WantedBy=shutdown.target
+WantedBy=multi-user.target
