@@ -3,4 +3,4 @@ Description=Enable shutdown backup
 
 [Service]
 Type=oneshot
-ExecStart=/usr/bin/systemctl enable shutdown-backup@%i
+ExecStart=/usr/bin/systemctl start shutdown-backup@%i
