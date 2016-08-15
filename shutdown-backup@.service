@@ -8,6 +8,7 @@ StandardOutput=journal+console
 RemainAfterExit=yes
 ExecStart=/bin/true
 ExecStop=-/usr/bin/unison -batch %i
+TimeoutStopSec=infinity
 
 [Install]
 WantedBy=multi-user.target
